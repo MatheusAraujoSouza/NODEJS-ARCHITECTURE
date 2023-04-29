@@ -1,7 +1,7 @@
 // Import the required modules
 const express = require('express');
 const path = require('path');
-const controllers = require('./controllers/homeController');
+const controllers = require('./controllers/controller');
 
 // Create an instance of the Express application
 const app = express();
@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Define the routes using the controllers
 app.get('/', controllers.home);
+app.get('/netflix', controllers.netflix);
 
 // Start the server and listen for incoming requests
 app.listen(3000, () => {
