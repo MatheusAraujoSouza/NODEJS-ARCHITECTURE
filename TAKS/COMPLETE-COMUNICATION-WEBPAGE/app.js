@@ -5,8 +5,8 @@ const routes = require('./routes');
 
 
 app.use(routes);
-app.use('/css', express.static(__dirname + '/views/pages/css'));
-app.use('/js', express.static(__dirname + '/views/pages/js'));
+app.use('/css', express.static(__dirname + '/routes/views/pages/css'));
+app.use('/js', express.static(__dirname + '/routes/views/pages/js'));
 
 // Start the server and listen for incoming requests
 app.listen(3000, () => {
