@@ -1,10 +1,7 @@
 // src/app/services/userService.js
 
 // Import the UserRepository
-const UserRepository = require('../../domain/repository/userRepository');
-
-// Create an instance of the UserRepository
-const userRepository = new UserRepository();
+const userRepository = require('../../domain/repository/userRepository');
 
 // Define the user services
 class UserService {
@@ -65,4 +62,4 @@ class UserService {
   }
 }
 
-module.exports = UserService;
+module.exports = new UserService;

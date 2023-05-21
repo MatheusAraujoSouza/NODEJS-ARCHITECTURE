@@ -17,7 +17,7 @@ class Database {
     }
   
     getUserById(id) {
-      return this.users.find(user => user.id === id);
+      return this.users.find(user => user.id == id);
     }
   
     addUser(user) {
@@ -25,14 +25,14 @@ class Database {
     }
   
     updateUser(user) {
-      const index = this.users.findIndex(u => u.id === user.id);
+      const index = this.users.findIndex(u => u.id == user.id);
       if (index !== -1) {
         this.users[index] = user;
       }
     }
   
     deleteUser(id) {
-      const index = this.users.findIndex(user => user.id === id);
+      const index = this.users.findIndex(user => user.id == id);
       if (index !== -1) {
         this.users.splice(index, 1);
       }
