@@ -43,7 +43,7 @@ const updateUser = async (req, res) => {
   try {
     const { id } = req.params;
     const { name, email } = req.body;
-    const updatedUser = await userService.updateUser(id, name, email);
+    const updatedUser = await userService.updateUser(id, { name, email });
 
     if (updatedUser) {
       res.json(updatedUser);

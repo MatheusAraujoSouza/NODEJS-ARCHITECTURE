@@ -28,9 +28,9 @@ class UserService {
   }
 
   // Create a new user
-  async createUser(userData) {
+  async createUser(userData,email) {
     try {
-      const newUser = await userRepository.createUser(userData);
+      const newUser = await userRepository.createUser(userData,email);
       return newUser;
     } catch (error) {
       // Handle error
