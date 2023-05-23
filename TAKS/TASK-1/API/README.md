@@ -50,3 +50,21 @@ Provides methods to perform database operations such as querying, inserting, upd
 Imports the necessary components from the domain, application, and infrastructure layers.
 Handles HTTP requests and forwards them to the appropriate controllers.
 This structure allows for a clear separation of concerns, with the domain layer containing the core business logic, the application layer handling application-specific operations, and the infrastructure layer dealing with external dependencies.
+
+
+# Conection with DB 
+Install knex as a dependency in your project:
+- npm install knex
+
+Configure knex to connect to your PostgreSQL database. Create a file called knexfile.js
+
+Create a migration file to define the "users" table. Run the following command to generate a new migration file:
+npx knex migrate:make create_users_table
+
+create a new migration file in a migrations 
+
+Run the migration to create the "users" table:
+npx knex migrate:latest
+
+
+to run the migration run "npm run migrate" in the root folder of the api
