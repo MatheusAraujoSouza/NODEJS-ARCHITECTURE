@@ -27,5 +27,14 @@ services:
     networks:
       - mynetwork
 
+  webpage:
+    build:
+      context: ./WEBPAGE
+      dockerfile: dockerfile
+    ports:
+      - 3001:3001
+    networks:
+      - mynetwork
+
 networks:
   mynetwork:
