@@ -53,7 +53,7 @@ router.post('/api/users', async (req, res) => {
   try {
     const { body } = req;
     const response = await axios.post('http://localhost:3000/users', body);
-    const data = response.data.data; // Update this line
+    const data = response.data; // Update this line
     res.json(data);
   } catch (error) {
     console.error('Error creating user:', error);
