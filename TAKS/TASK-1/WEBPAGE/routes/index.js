@@ -7,6 +7,12 @@ router.get('/', (req, res) => {
   res.sendFile(__dirname + '/views/pages/home.html');
 });
 
+
+// Route handler for the home page
+router.get('/user', (req, res) => {
+  res.sendFile(__dirname + '/views/pages/user.html');
+});
+
 // Route handler for the about page
 router.get('/about', (req, res) => {
   res.sendFile(__dirname + '/views/pages/about.html');
