@@ -28,7 +28,7 @@ router.get('/table', (req, res) => {
 // CRUD routes
 router.get('/api/users', async (req, res) => {
   try {
-    const response = await axios.get('http://localhost:3000/users');
+    const response = await axios.get('http://task-1-api-1:3000/users');
     const data = response.data;
     res.json(data);
   } catch (error) {
@@ -40,7 +40,7 @@ router.get('/api/users', async (req, res) => {
 router.get('/api/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const response = await axios.get(`http://localhost:3000/users/${id}`);
+    const response = await axios.get(`http://task-1-api-1:3000/users/${id}`);
     const data = response.data;
     res.json(data);
   } catch (error) {
@@ -52,7 +52,7 @@ router.get('/api/users/:id', async (req, res) => {
 router.post('/api/users', async (req, res) => {
   try {
     const { body } = req;
-    const response = await axios.post('http://localhost:3000/users', body);
+    const response = await axios.post('http://task-1-api-1:3000/users', body);
     const data = response.data; // Update this line
     res.json(data);
   } catch (error) {
@@ -65,7 +65,7 @@ router.put('/api/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
     const { body } = req;
-    const response = await axios.put(`http://localhost:3000/users/${id}`, body);
+    const response = await axios.put(`http://task-1-api-1:3000/users/${id}`, body);
     const data = response.data;
     res.json(data);
   } catch (error) {
@@ -78,7 +78,7 @@ router.delete('/api/users/:id', async (req, res) => {
   try {
     const { id } = req.params;
     console.log(id)
-    await axios.delete(`http://localhost:3000/users/${id}`);
+    await axios.delete(`http://task-1-api-1:3000/users/${id}`);
     res.sendStatus(204); // Send a success status without any data
   } catch (error) {
     console.error('Error deleting user:', error);
